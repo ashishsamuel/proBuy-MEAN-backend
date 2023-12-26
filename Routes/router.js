@@ -33,5 +33,7 @@ router.get('/cart/decrement/:id',jwtMiddleware,cartController.decrementCartContr
 router.delete('/cart/remove/:id',jwtMiddleware,cartController.removeCartItemController)
 // empty all cart items
 router.delete('/cart/empty',jwtMiddleware,cartController.emptyCartController)
+// search products
+router.get('/products/filter',jwtMiddleware,productController.getFilteredProductResults)
 
 module.exports = router
